@@ -6,9 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features ="src/test/resources/Registration.feature" ,
-        glue = "Steps"
+        features={"src/test/resources/SauceLabs/Login.feature"},
+        glue={"Steps","Hooks"},
+        tags= "@test"
 )
+public class SauseLabsRunner {
 
-public class TestRunner {
 }

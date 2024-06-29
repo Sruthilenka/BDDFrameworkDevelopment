@@ -1,9 +1,9 @@
-package Steps;
+package Steps.AccountImplementation;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.WithdrawAmount;
+import org.example.AccountImplementationPages.WithdrawAmount;
 
 public class WithdrawStepDefn {
     private WithdrawAmount account;

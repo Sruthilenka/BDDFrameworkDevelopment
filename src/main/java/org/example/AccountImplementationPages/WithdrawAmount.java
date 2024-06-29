@@ -1,6 +1,6 @@
-package org.example;
+package org.example.AccountImplementationPages;
 
-public class WithdrawAmount implements Account{
+public class WithdrawAmount implements Account {
     private double balance;
 
     public WithdrawAmount(double balance){
