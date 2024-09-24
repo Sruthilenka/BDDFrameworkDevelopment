@@ -5,6 +5,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.example.PicoImplementationPages.RegistrationPageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,7 +19,8 @@ public class RegistrationStepDefn {
 
     @Before
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", "/Users/sruthilenka/Documents/chromedriver");
+      //  System.setProperty("webdriver.chrome.driver", "/Users/sruthilenka/Documents/chromedriver");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         registrationPageObject = new RegistrationPageObject(driver);
     }

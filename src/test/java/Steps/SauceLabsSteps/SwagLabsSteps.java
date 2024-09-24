@@ -1,11 +1,13 @@
 package Steps.SauceLabsSteps;
 
-import Hooks.StepHooks;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.example.SauceLabs.SwagLabsLoginPage;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
 public class SwagLabsSteps {
@@ -13,7 +15,8 @@ public class SwagLabsSteps {
     private SwagLabsLoginPage swagLabsLoginPage;
 
     public SwagLabsSteps() {
-        this.driver = StepHooks.getDriver();
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
         this.swagLabsLoginPage = new SwagLabsLoginPage(driver);
     }
